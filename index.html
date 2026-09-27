@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Happy 18th Birthday Tanuu ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #4a3028;
+    background:
+        radial-gradient(circle at top, #fffaf3 0%, #f8e9d7 48%, #efd5bd 100%);
+}
+
+/* =========================
+   BACKGROUND DECORATIONS
+========================= */
+
+.decorations {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.decor {
+    position: absolute;
+    opacity: 0.25;
+    user-select: none;
+    animation: floatAround 12s ease-in-out infinite alternate;
+}
+
+.decor:nth-child(1) {
+    left: 4%;
+    top: 8%;
+    font-size: 26px;
+}
+
+.decor:nth-child(2) {
+    right: 6%;
+    top: 17%;
+    font-size: 22px;
+    animation-delay: 2s;
+}
+
+.decor:nth-child(3) {
+    left: 7%;
+    bottom: 18%;
+    font-size: 24px;
+    animation-delay: 4s;
+}
+
+.decor:nth-child(4) {
+    right: 7%;
+    bottom: 12%;
+    font-size: 27px;
+    animation-delay: 1s;
+}
+
+.decor:nth-child(5) {
+    left: 45%;
+    top: 4%;
+    font-size: 19px;
+    animation-delay: 5s;
+}
+
+@keyframes floatAround {
+    0% {
+        transform: translate(0, 0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translate(12px, -18px) rotate(8deg);
+    }
+
+    100% {
+        transform: translate(-10px, 14px) rotate(-6deg);
+    }
+}
+
+/* =========================
+   OPENING SCREEN
+========================= */
+
+#opening {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+
+    background:
+        radial-gradient(circle at center, #fffaf2, #f4ddc8);
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+#opening.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.opening-card {
+    width: min(100%, 430px);
+
+    padding: 38px 23px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background: rgba(255,255,255,0.85);
+
+    border: 1px solid rgba(125,75,50,0.12);
+
+    box-shadow:
+        0 20px 60px rgba(80,45,25,0.16);
+}
+
+.cake {
+    font-size: 60px;
+    margin-bottom: 15px;
+
+    animation: cakeBounce 2s ease-in-out infinite;
+}
+
+@keyframes cakeBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.opening-card h1 {
+    margin: 0;
+
+    font-size: clamp(30px, 9vw, 46px);
+
+    line-height: 1.1;
+
+    color: #713f32;
+}
+
+.opening-card p {
+    margin: 16px 0 28px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+.open-btn,
+.nav-btn {
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+        linear-gradient(135deg, #8f5141, #6f382d);
+
+    box-shadow:
+        0 8px 20px rgba(90,45,35,0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.open-btn {
+    padding: 15px 24px;
+
+    border-radius: 999px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+.open-btn:hover,
+.nav-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(90,45,35,0.28);
+}
+
+/* =========================
+   MAIN WEBSITE
+========================= */
+
+#main {
+    position: relative;
+
+    z-index: 2;
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding:
+        25px
+        14px
+        calc(100px + env(safe-area-inset-bottom));
+}
+
+#main.visible {
+    display: block;
+}
+
+.page {
+    display: none;
+
+    width: min(100%, 500px);
+
+    margin: 0 auto;
+}
+
+.page.active {
+    display: block;
+
+    animation: pageIn 0.7s ease;
+}
+
+@keyframes pageIn {
+    from {
+        opacity: 0;
+
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   LETTER CARD
+========================= */
+
+.letter-card {
+    width: 100%;
+
+    padding: 28px 19px 25px;
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.95),
+            rgba(255,250,242,0.97)
+        );
+
+    border:
+        1px solid rgba(120,75,50,0.12);
+
+    box-shadow:
+        0 18px 50px rgba(80,45,25,0.14),
+        inset 0 0 35px rgba(180,120,80,0.035);
+}
+
+.page-label {
+    text-align: center;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #9a6756;
+
+    margin-bottom: 12px;
+
+    font-weight: bold;
+}
+
+.letter-card h1 {
+    margin: 0 0 22px;
+
+    text-align: center;
+
+    color: #713f32;
+
+    font-size: clamp(28px, 8vw, 39px);
+
+    line-height: 1.15;
+}
+
+.letter-card p {
+    margin: 0 0 17px;
+
+    font-size: 16px;
+
+    line-height: 1.78;
+
+    overflow-wrap: anywhere;
+}
+
+.letter-card strong {
+    color: #713f32;
+}
+
+.letter-card em {
+    color: #805548;
+}
+
+/* =========================
+   PHOTO SLOTS
+========================= */
+
+.photo-slot {
+    width: 100%;
+
+    margin: 25px 0;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #f1e3d6;
+
+    box-shadow:
+        0 10px 25px rgba(80,45,25,0.12);
+}
+
+.photo-slot img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-width: 100%;
+
+    opacity: 0;
+
+    transform: scale(1);
+
+    transition:
+        opacity 2s ease,
+        transform 22s ease-in-out;
+}
+
+/*
+   When the page becomes visible:
+   - photo slowly appears
+   - then begins an extremely slow zoom
+*/
+
+.page.active .photo-slot img {
+    opacity: 1;
+
+    transform: scale(1.06);
+}
+
+/*
+   Stagger photos on pages containing multiple images.
+*/
+
+.page.active .photo-slot:nth-of-type(2) img {
+    transition-delay: 0.7s;
+}
+
+.page.active .photo-slot:nth-of-type(3) img {
+    transition-delay: 1.4s;
+}
+
+/* =========================
+   SPECIAL QUOTE
+========================= */
+
+.quote {
+    margin: 21px 0;
+
+    padding: 14px;
+
+    border-left:
+        4px solid #b77b68;
+
+    border-radius: 9px;
+
+    background:
+        rgba(185,125,103,0.07);
+
+    font-style: italic;
+
+    line-height: 1.7;
+
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   PAGE COUNTER
+========================= */
+
+.page-counter {
+    text-align: center;
+
+    margin: 20px 0 12px;
+
+    color: #9a6c5b;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.nav-btn {
+    min-width: 115px;
+
+    padding: 12px 18px;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.nav-btn:disabled {
+    opacity: 0.35;
+
+    cursor: default;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+#musicBtn {
+    position: fixed;
+
+    z-index: 10;
+
+    right: 15px;
+
+    bottom:
+        calc(15px + env(safe-area-inset-bottom));
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    background:
+        rgba(255,255,255,0.92);
+
+    color: #713f32;
+
+    box-shadow:
+        0 8px 25px rgba(80,45,25,0.18);
+
+    display: none;
+}
+
+#musicBtn.visible {
+    display: block;
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    #main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .letter-card {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        border-radius: 21px;
+    }
+
+    .letter-card p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .navigation {
+        gap: 7px;
+    }
+
+    .nav-btn {
+        min-width: 105px;
+
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     FLOATING DECORATIONS
+========================= -->
+
+<div class="decorations">
+
+    <div class="decor">🎈</div>
+
+    <div class="decor">✨</div>
+
+    <div class="decor">🎂</div>
+
+    <div class="decor">💖</div>
+
+    <div class="decor">🎀</div>
+
+</div>
+
+
+<!-- =========================
+     OPENING SCREEN
+========================= -->
+
+<section id="opening">
+
+    <div class="opening-card">
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <h1>
+            Happy 18th, Tanuu ❤️
+        </h1>
+
+        <p>
+            I made something for you.<br>
+            Four years of friendship deserve more than just a
+            “Happy Birthday” message. 🫶
+        </p>
+
+        <button
+            class="open-btn"
+            onclick="openSurprise()"
+        >
+            Open Your Surprise ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<audio id="birthdayMusic" loop>
+
+    <source
+        src="music (3).mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<button
+    id="musicBtn"
+    onclick="toggleMusic()"
+    aria-label="Toggle music"
+>
+    🎵
+</button>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main id="main">
+
+
+<!-- =====================================================
+     PAGE 1
+====================================================== -->
+
+<section class="page active">
+
+    <div class="letter-card">
+
+        <div class="page-label">
+            Birthday Girl · 01
+        </div>
+
+        <h1>
+            To My Tanuu ❤️
+        </h1>
+
+        <p>
+            I still remember how all of this started.
+        </p>
+
+        <p>
+            8th class. You came to ask for my tiffin because apparently
+            my food looked better than yours. 😂 And somehow, from one
+            line "oye chandresh kyaa laya h tum tiffin me" , we started
+            talking… and then talking became friendship… and friendship
+            somehow became <em>this</em>.
+        </p>
+
+        <p>
+            Four years.
+        </p>
+
+        <p>
+            <strong>FOUR. YEARS. 😭</strong>
+        </p>
+
+        <p>
+            We've had our fights, our misunderstandings, our “okay we're
+            done” moments, and yes, we've technically broken up as friends
+            more times than I can probably count. 😂
+        </p>
+
+        <p>
+            But somehow, no matter what happened, we always found our way
+            back to each other.
+        </p>
+
+        <p>
+            And I think that's what makes us ,<em>us</em>.
+        </p>
+
+        <p>
+            Because no matter how far we went, neither of us ever really left.
+        </p>
+
+        <p>
+            From the very beginning, I considered you my best friend.
+            I don't even remember exactly when you became such a huge part
+            of my life. It just happened slowly, naturally… until one day
+            I realised that you're one of the people I simply cannot
+            imagine my life without.
+        </p>
+
+
+        <!-- PHOTO 1 -->
+
+        <div class="photo-slot">
+
+            <img
+                src="tanu1.jpg"
+                alt="Tanu memory 1"
+            >
+
+        </div>
+
+
+        <p>
+            And now look at you…
+        </p>
+
+        <p>
+            <strong>
+                MY BONI BADMOSH IS 18.
+            </strong>
+            😭🎂
+        </p>
+
+        <p>
+            Happy Birthday, Tanuu. ❤️
+        </p>
+
+    </div>
+
+
+    <div class="page-counter">
+        1 / 4
+    </div>
+
+
+    <div class="navigation">
+
+        <button
+            class="nav-btn"
+            disabled
+        >
+            ← Back
+        </button>
+
+        <button
+            class="nav-btn"
+            onclick="nextPage()"
+        >
+            Next →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 2
+====================================================== -->
+
+<section class="page">
+
+    <div class="letter-card">
+
+        <div class="page-label">
+            The person I trust · 02
+        </div>
+
+        <h1>
+            What you mean to me 🫶
+        </h1>
+
+        <p>
+            There are very few people in this world whom I can completely
+            be myself around.
+        </p>
+
+        <p>
+            You're one of them.
+        </p>
+
+        <p>
+            Actually, you're probably the one person I trust the most.
+        </p>
+
+        <p>
+            You're my safe place.
+        </p>
+
+        <p>
+            You're the person I can run to whenever I want, without
+            worrying about being judged for who I am, what I did, what
+            I said, or how stupid I might be acting that day. 😂
+        </p>
+
+        <p>
+            You understand me in ways I don't always know how to explain.
+        </p>
+
+        <p>
+            And honestly, I adore your presence in my life.
+        </p>
+
+        <p>
+            Your smile. Your kindness. Your existence itself.
+        </p>
+
+        <p>
+            Everything about you has become such a familiar and beautiful
+            part of my life that sometimes I don't even realise how much
+            you mean to me until I imagine what my life would be like
+            without you.
+        </p>
+
+        <p>
+            And I genuinely don't think anyone could replace you.
+        </p>
+
+        <p>
+            Not because you're perfect.
+        </p>
+
+        <p>
+            But because <strong>you're you.</strong>
+        </p>
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="photo-slot">
+
+            <img
+                src="tanu2.jpg"
+                alt="Tanu memory 2"
+            >
+
+        </div>
+
+
+        <p>
+            You've been through so much, more than you probably deserved
+            to go through, and somehow you still manage to remain kind,
+            caring and strong.
+        </p>
+
+        <p>
+            I've watched you handle things that weren't easy.
+        </p>
+
+        <p>
+            And whenever you needed someone, I tried my best to be there.
+        </p>
+
+        <p>
+            I'll always want to see you happy, peaceful and getting
+            everything you deserve. Uk agr zarurt padee na to i can even
+            sacrifice my life for u bczzz u r the person i want too see
+            achieve evrything at anyy costt ....
+        </p>
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="photo-slot">
+
+            <img
+                src="tanu3.jpg"
+                alt="Tanu memory 3"
+            >
+
+        </div>
+
+
+        <p>
+            Because if anyone deserves good things in this universe…
+        </p>
+
+        <p>
+            <strong>
+                it's you, my Chotuu don. ❤️
+            </strong>
+        </p>
+
+    </div>
+
+
+    <div class="page-counter">
+        2 / 4
+    </div>
+
+
+    <div class="navigation">
+
+        <button
+            class="nav-btn"
+            onclick="previousPage()"
+        >
+            ← Back
+        </button>
+
+        <button
+            class="nav-btn"
+            onclick="nextPage()"
+        >
+            Next →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 3
+====================================================== -->
+
+<section class="page">
+
+    <div class="letter-card">
+
+        <div class="page-label">
+            Four years of chaos · 03
+        </div>
+
+        <h1>
+            Us being us 😂❤️
+        </h1>
+
+        <p>
+            Our friendship doesn't really have one “special moment.”
+        </p>
+
+        <p>
+            Because honestly,
+        </p>
+
+        <p>
+            <strong>
+                Every moment with you is special.
+            </strong>
+        </p>
+
+        <p>
+            Even the stupid ones.
+        </p>
+
+        <p>
+            Especially the stupid ones. 😂
+        </p>
+
+        <p>
+            Like that one time we were literally on our way to the hospital
+            after an accident, and somehow after I managed to handle the
+            bike, we ended up laughing about it.
+        </p>
+
+
+        <!-- PHOTO 4 -->
+
+        <div class="photo-slot">
+
+            <img
+                src="tanu4.jpg"
+                alt="Tanu memory 4"
+            >
+
+        </div>
+
+
+        <div class="quote">
+
+            NORMAL PEOPLE:
+            “ABE AAJ SE TERE SATH NI BETHUGA.”
+
+            <br><br>
+
+            US:
+            “BROOOO ABEE KUTAAA, BACH GYEE MRTE MRTE 😂😂”
+
+        </div>
+
+
+        <p>
+            And that's basically our friendship in one story.
+        </p>
+
+        <p>
+            We've laughed when we probably shouldn't have.
+        </p>
+
+        <p>
+            We've fought over things that probably didn't even matter.
+        </p>
+
+        <p>
+            We've annoyed each other.
+        </p>
+
+        <p>
+            We've disappeared.
+        </p>
+
+        <p>
+            We've come back.
+        </p>
+
+        <p>
+            We've said “bas ab nahi baat karenge” and then somehow ended
+            up talking again. 😭
+        </p>
+
+        <p>
+            And through all of that, four years somehow passed.
+        </p>
+
+
+        <!-- PHOTO 5 -->
+
+        <div class="photo-slot">
+
+            <img
+                src="tanu5.jpg"
+                alt="Tanu memory 5"
+            >
+
+        </div>
+
+
+        <p>
+            NO MATTER WHERE WE WILL BE AFTER YEARS BTW AKHRI HI SAAL H ,
+            BUT TU MERE SATH RHEGI HMESAA MERE DIL ME RHEGI MERE DIMAG
+            ME RHEGII BCZ U R THE BEST TANU U R THE BESTTTTTTESTTTT
+            PERSONNNNN EVERRRR .......... JUST PROMISE MEE KI TUU MEKOO
+            BHULNAA MAATT OR HMESAA HUMLOG EK DUSREE KO HAR BAAT BTAYGEE
+            HARR EK CHIZZ JESEE ABHIII H VESEE HI HMESAAA RHEGEEE
+            HMESAAAAAA...
+        </p>
+
+        <p>
+            TEKO HUM KUCH BHII KAHEEE MY FAV ONEE BONI BDMOSH , TANUU
+            YA SHAWTYY YAA JOO BHIII
+        </p>
+
+        <p>
+            But behind all those names, jokes and madness, there's one
+            thing that has always stayed the same:
+        </p>
+
+        <p>
+            <strong>
+                You're my favourite person.
+            </strong>
+        </p>
+
+        <p>
+            And even if someday life takes us in completely different
+            directions, I know I'll always look back at these four years
+            and think—
+        </p>
+
+        <p>
+            <em>
+                Damn… she was one of the most beautiful parts of my life. ❤️
+            </em>
+        </p>
+
+    </div>
+
+
+    <div class="page-counter">
+        3 / 4
+    </div>
+
+
+    <div class="navigation">
+
+        <button
+            class="nav-btn"
+            onclick="previousPage()"
+        >
+            ← Back
+        </button>
+
+        <button
+            class="nav-btn"
+            onclick="nextPage()"
+        >
+            Next →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 4
+====================================================== -->
+
+<section class="page">
+
+    <div class="letter-card">
+
+        <div class="page-label">
+            Happy 18th Birthday · 04
+        </div>
+
+        <h1>
+            Your 18th chapter 🎂✨
+        </h1>
+
+        <p>
+            And now…
+        </p>
+
+        <p>
+            <strong>
+                YOU'RE 18.
+            </strong>
+        </p>
+
+        <p>
+            WHAT. 😭
+        </p>
+
+        <p>
+            My little Tanuu is officially entering a whole new chapter
+            of life.
+        </p>
+
+        <p>
+            I hope this year gives you everything you've been waiting for.
+        </p>
+
+        <p>
+            I hope you get the happiness you deserve.
+        </p>
+
+        <p>
+            I hope you meet people who treat your heart gently.
+        </p>
+
+        <p>
+            I hope you achieve everything you dream about.
+        </p>
+
+        <p>
+            And I hope you never forget how genuinely special you are.
+        </p>
+
+        <p>
+            You've spent so much of your life being strong for yourself
+            and for other people.
+        </p>
+
+        <p>
+            So now, I hope life becomes a little softer for you.
+        </p>
+
+        <p>
+            I hope you laugh more.
+        </p>
+
+        <p>
+            Smile more.
+        </p>
+
+        <p>
+            Travel more.
+        </p>
+
+        <p>
+            Make more memories.
+        </p>
+
+        <p>
+            And do all the things that make <em>you</em> happy.
+        </p>
+
+        <p>
+            And whenever life gets difficult again, just remember—
+        </p>
+
+        <p>
+            <strong>
+                you don't have to face everything alone.
+            </strong>
+        </p>
+
+
+        <!-- PHOTO 6 -->
+
+        <div class="photo-slot">
+
+            <img
+                src="tanu6.jpg"
+                alt="Tanu memory 6"
+            >
+
+        </div>
+
+
+        <p>
+            Your Naman is always somewhere around, ready to listen,
+            support you, annoy you, fight with you, make you laugh,
+            and probably irritate you again five minutes later. 😂❤️
+        </p>
+
+        <p>
+            No matter how many years pass, no matter where life takes us,
+            and no matter how many times we annoy each other…
+        </p>
+
+        <p>
+            You'll always have a very special place in my life.
+        </p>
+
+        <p>
+            Because you're not just someone I met in 8th class.
+        </p>
+
+        <p>
+            You're four years of memories.
+        </p>
+
+        <p>
+            Four years of madness.
+        </p>
+
+        <p>
+            Four years of fights and making up.
+        </p>
+
+        <p>
+            Four years of laughter.
+        </p>
+
+        <p>
+            Four years of being there.
+        </p>
+
+        <p>
+            AND MY BESTESSTT 4 YEARSS OF LIFEE AND THISS WILL
+            CONTINUEEEEE......
+        </p>
+
+        <p>
+            And four years of a friendship that somehow always found
+            its way back home, OBVVV...
+        </p>
+
+        <p>
+            So here's to ur <strong>18th birthdayyyy</strong>.
+        </p>
+
+        <p>
+            Here's to you.
+        </p>
+
+        <p>
+            Here's to us.
+        </p>
+
+        <p>
+            And here's to all the memories we haven't made yet.
+        </p>
+
+        <p>
+            <strong>
+                Happy 18th Birthday, Tanuu. 🎂❤️
+            </strong>
+        </p>
+
+        <p>
+            Stay the same kind, crazy, strong, beautiful soul that you are.
+        </p>
+
+        <p>
+            And never forget—
+        </p>
+
+        <p>
+            <strong>
+                you're one of the most special people in my life.
+            </strong>
+        </p>
+
+        <p>
+            With all my love, friendship and endless bakchodi,
+        </p>
+
+        <p>
+            <strong>
+                Your Naman 🫶
+            </strong>
+        </p>
+
+        <p>
+            <strong>
+                Happy Birthday, Boni Badmosh. ❤️🎂✨
+            </strong>
+        </p>
+
+    </div>
+
+
+    <div class="page-counter">
+        4 / 4
+    </div>
+
+
+    <div class="navigation">
+
+        <button
+            class="nav-btn"
+            onclick="previousPage()"
+        >
+            ← Back
+        </button>
+
+        <button
+            class="nav-btn"
+            disabled
+        >
+            Next →
+        </button>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+let currentPage = 0;
+
+const pages = document.querySelectorAll(".page");
+
+const opening =
+    document.getElementById("opening");
+
+const main =
+    document.getElementById("main");
+
+const music =
+    document.getElementById("birthdayMusic");
+
+const musicBtn =
+    document.getElementById("musicBtn");
+
+
+/* =========================
+   OPEN WEBSITE
+========================= */
+
+function openSurprise() {
+
+    opening.classList.add("hidden");
+
+    main.classList.add("visible");
+
+    musicBtn.classList.add("visible");
+
+
+    /*
+       The button click is a user interaction,
+       so mobile browsers normally allow music
+       to start here.
+    */
+
+    music.play().catch(() => {
+
+        console.log(
+            "Music could not autoplay. Tap the music button."
+        );
+
+    });
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "instant"
+    });
+
+}
+
+
+/* =========================
+   SHOW PAGE
+========================= */
+
+function showPage(index) {
+
+    if (
+        index < 0 ||
+        index >= pages.length
+    ) {
+        return;
+    }
+
+
+    pages.forEach(page => {
+
+        page.classList.remove("active");
+
+    });
+
+
+    currentPage = index;
+
+
+    pages[currentPage]
+        .classList.add("active");
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =========================
+   NEXT PAGE
+========================= */
+
+function nextPage() {
+
+    if (
+        currentPage <
+        pages.length - 1
+    ) {
+
+        showPage(
+            currentPage + 1
+        );
+
+    }
+
+}
+
+
+/* =========================
+   PREVIOUS PAGE
+========================= */
+
+function previousPage() {
+
+    if (currentPage > 0) {
+
+        showPage(
+            currentPage - 1
+        );
+
+    }
+
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+function toggleMusic() {
+
+    if (music.paused) {
+
+        music.play().catch(() => {});
+
+        musicBtn.textContent = "🎵";
+
+    } else {
+
+        music.pause();
+
+        musicBtn.textContent = "🔇";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
